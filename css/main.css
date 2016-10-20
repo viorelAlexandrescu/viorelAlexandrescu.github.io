@@ -77,7 +77,6 @@ li p{
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 
     border-radius: 3px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -96,7 +95,6 @@ li p{
 .profile-photo-area{
     padding: 16px 0 16px 16px;
     display: flex;
-    flex: 1;
     align-items: center;
 }
 
