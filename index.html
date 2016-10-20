@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AVȘ</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body onscroll="onPageScroll()">
+
+<!--Page Header-->
+<div id="page-header" class="header">
+    <p id="myName">Viorel Ștefan Alexandrescu</p>
+    <ul id="header-list">
+        <li><a name="My Resume" href="#" onclick="onHeaderElementClick('resume')">Resume</a></li>
+        <li><a name="My Projects" href="#" onclick="onHeaderElementClick('projects')">Projects</a></li>
+        <li><a href="https://www.instagram.com/viorel.alexandrescu/" target="_blank">Photo Gallery</a></li>
+        <li><a name="About Me" href="#" onclick="onHeaderElementClick('about')">About</a></li>
+    </ul>
+</div>
+
+<div id="container">
+
+    <div id="about-page" class="content" about="about">
+        <div class="profile-card">
+            <div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="resume-page" class="content" about="resume">
+
+        <!--Skills Table-->
+        <p class="resume-title">Skills</p>
+        <hr class="resume-line">
+        <div class="resume-table">
+            <!--1st Row-->
+            <div class="resume-row">
+                <div class="resume-skill">
+                    <h3>Web Design</h3>
+                    <p>This website was made as minimalist as possible,
+                        using only basic <b>HTML</b> tags and "prettifying" it with <b>CSS</b>.
+                        <br>The flow of the page is implemented with plain <b>JavaScript</b>.
+                        <br><br> I tried to give it a Material Design look as
+                        I am a fan of this design guideline myself.</p>
+                </div>
+
+                <div class="resume-skill">
+                    <h3>Backend</h3>
+                    <p>I have worked with <b>MySQL</b> DBMS in concordance
+                        with <b>JDBC</b>(Java Database Connectivity) on a school project;
+                        a Java desktop application for an electronic components shop.
+                        <br><br>
+                        My experience in working with databases is limited to simple SQL
+                        queries, but I wish to exchange that with a proper training in using
+                        NoSQL Databases like MongoDB or Neo4j.</p>
+                </div>
+            </div>
+
+            <!--2nd Row-->
+            <div class="resume-row">
+                <div class="resume-skill">
+                    <h3>Android</h3>
+                    <p>I know the basics of building an app
+                        using the framework.<br><br>
+                        I made my own music player since none of the free apps
+                        available in the Play Store weren't able to cater for my need and expectations.</p>
+                </div>
+
+                <div class="resume-skill">
+                    <h3>Development Tools</h3>
+                    <p>I use <b>Linux</b> as an alternative to Windows.
+                        I'm still a n00b when it comes to shell scripts,
+                        but very enthusiastic to learning more.</p>
+                    <br>
+                    <p><b>Git</b> for Version Control, my projects are on GitHub and BitBucket.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Experience Table-->
+        <p class="resume-title">Work Experience</p>
+        <hr>
+        <div class="resume-table">
+            <!--1st Row-->
+            <div class="resume-row">
+                <div class="resume-skill">
+                    <h3>Part-Time QA</h3>
+                    <p>March 2016 - August 2016<br><br>
+                        Test applications to discover bugs before pushing a new build
+                        into production.<br>
+                        After this step, ensure highest level of quality per product.</p>
+                </div>
+
+                <div class="resume-skill">
+                    <h3>Volunteer in AS-MI</h3>
+                    <p>November 2014 - Present<br><br>
+                        As a volunteer, I have accomplished a great number of tasks;
+                        from preparing a stage for presentations or shows to promoting
+                        a national contest throughout numerous universities from Romania.<br><br>
+
+
+                        A few projects I've volunteered for are:
+                        <ul id="asmi-projects-list">
+                            <li><b>Cariere v4.0</b> at which I've managed presentations during the event.</li>
+                            <li><b>S.T.A.R.T. 2015</b> - Logistics during trainings.</li>
+                            <li>Promoting <b>imSMART 2015</b>
+                                at a national level in numerous universities.</li>
+                            <li>Organizing the Music Night and logistics during
+                                <b>Artă ‘n Dar</b>, which is a charity event.</li>
+                            <li>Inform pupils at <b>The University of Bucharest Educational Fair</b>
+                                of what our faculty has to offer them.</li>
+                            <li><b>Promoting the faculty in high schools</b>
+                                so pupils would know what education they may receive as a student there.</li>
+                        </ul>
+                        </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div id="projects-page" class="content" about="projects">
+
+        <!-- BoomBox -->
+        <div class="project-card">
+            <p class="project-card-title">BoomBox</p>
+            <p>I wanted to make a music player suitable for my needs. Minimalist, yet effective!</p>
+            <hr>
+            <a href="https://github.com/viorelAlexandrescu/BoomBox" target="_blank">GitHub Page</a>
+        </div>
+
+        <!-- LRobot -->
+        <div class="project-card">
+            <p class="project-card-title">LRobot</p>
+            <p>LRobot is a next-gen robot which can move around a room, identify people
+                and memorise who they are!
+                <br>My job on this project was to implement how it shows it's emotions;
+                I used the Java Swing API to draw it's face and Java to change his facial
+                expressions when the backend would ask so.</p>
+            <hr>
+            <a href="https://bitbucket.org/citrusmockoffteam/lrobot-citrus-mock-off/branch/javaUI"
+               target="_blank">Bitbucket Page</a>
+        </div>
+
+        <!-- Electronics Shop-->
+        <div class="project-card">
+            <p class="project-card-title">IT Shop</p>
+            <p>This is a school project for the Java Course.<br>
+                It's a desktop application for administrating an IT Shop.<br><br>
+
+                Before starting development, I found this as being a perfect opportunity
+                to learn how to implement the features required using MVC.
+                <br>
+                I used JavaFX to implement my views,
+                the controller was made up of Java methods and API calls from JDBC for all my queries.<br>
+                The Model was made up of classes which built up all the entities within the database.</p>
+            <hr>
+            <a href="https://bitbucket.org/N1njagangsta/cyka-blyat/overview"
+               target="_blank">Bitbucket Page</a>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
