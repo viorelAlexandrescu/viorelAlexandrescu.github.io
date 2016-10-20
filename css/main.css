@@ -66,15 +66,35 @@ li p{
 
 
 #about-page{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
 }
 .profile-card{
     background-color: #3F51B5;
     width: 100%;
     height: 100%;
+
+    display: flex;
+    flex-direction: row;
+
     border-radius: 3px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profile-info{
+    padding: 16px;
+    color: #fafafa;
+}
+.profile-info th{
+    text-align: left;
+    font-weight: 500;
+}
+.profile-info td{
+    padding-left: 24px;
+}
+#profile-photo{
+    padding: 16px;
+    width: 25%;
+    height: 25%;
 }
 
 #resume-page {
