@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Viorel | Profile</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </head>
 
 <body onscroll="onPageScroll()">
@@ -29,40 +29,38 @@
         <div class="profile-card">
 
             <div class="profile-photo-area">
-                <img src="images/profile-photo-small.jpg">
+                <img id="my-profile-photo" src="images/profile-photo-small.jpg">
             </div>
 
+            <div class="profile-info">
 
-                <div class="profile-info">
-                    <table>
-                        <tr>
-                            <th>Phone</th>
-                            <td class="cuc">0722 509 867</td>
-                        </tr>
+                <div class="top-info-container">
+                    <div class="info-leftPanel">
+                        <p>Phone</p>
+                        <p>E-mail</p>
+                        <p>Employment</p>
+                    </div>
 
-                        <tr>
-                            <th>E-mail</th>
-                            <td>alex.viorel.117@gmail.com</td>
-                        </tr>
+                    <div class="info-rightPanel">
+                        <p><a>0722 509 867</a></p>
+                        <p><a>alex.viorel.117@gmail.com</a></p>
+                        <p>Student/Freelancer</p>
+                    </div>
+                </div>
 
-                        <tr>
-                            <th>Employment</th>
-                            <td>Student/Freelancer</td>
-                        </tr>
-
-                    </table>
-
+                <div>
                     <p>
                         <br>
-                        Hi I'm Viorel!<br><br>
+                        Hi, I'm Viorel!<br><br>
 
-                        I'm a student at the University of Bucharest, preparing to become an engineer!<br>
+                        I'm a student at the University of Bucharest, preparing to become an engineer.<br>
 
-                        I'm also a volunteer in the Student's Association at Mathematics & Computer Science!<br><br>
-                        In my free time I play drums and study about Science and Literature, Psychology and Philosophy.
+                        I'm also a volunteer in the Student's Association at Mathematics and Computer Science.<br><br>
+                        In my free time I play drums and study about science and human psychology.
                     </p>
-
                 </div>
+
+            </div>
 
         </div>
     </div>
@@ -208,4 +206,5 @@
 
 
 </body>
+
 </html>
