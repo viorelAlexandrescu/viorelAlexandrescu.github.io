@@ -8,3 +8,99 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+#header-list{
+    visibility: hidden;
+    display: none;
+}
+
+#page-header{
+    background-color: #3F51B5;
+    width: 100%;
+    color: #fafafa;
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    z-index: 10;
+}
+
+#myName{
+    margin: 0 0 0 auto;
+    padding: 4vw 0;
+    display: block;
+    font-size: 4vw;
+}
+
+
+#my-profile-photo{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 17vw;
+    display: block;
+    margin: auto;
+    max-width: 32vw;
+    border-radius: 50%;
+}
+
+#header-menu-button{
+    width: 100%;
+    height: auto;
+    max-width: 9vw;
+    padding: 0;
+    margin: 0 3vw 0 auto;
+}
+
+#container{
+    position: relative;
+    padding: 0;
+    z-index: 2;
+    margin: 0;
+}
+
+.profile-photo-area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #3F51B5;
+}
+
+#about-page{
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.profile-card{
+
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 3px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profile-info{
+    padding: 32px 16px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 2.7vw;
+}
+.top-info-container{
+    width: 50%;
+    margin: 0 auto 0 0;
+    display: inline-flex;
+    font-size: 2.5vw;
+}
+.info-leftPanel{
+    float: left;
+    margin-right: 36px;
+}
+.info-rightPanel{
+    float: right;
+}
