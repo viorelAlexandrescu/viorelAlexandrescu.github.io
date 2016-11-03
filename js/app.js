@@ -1,4 +1,4 @@
-var currentLoadedPage, isViewOnMobile;
+var currentLoadedPage, isViewOnMobile, isMenuButtonClicked;
 
 window.addEventListener("load",onPageLoad);
 
@@ -16,7 +16,7 @@ function onPageLoad(){
             hideList();
         };
 
-        var isMenuButtonClicked = false;
+        isMenuButtonClicked = false;
         menuButton.onclick = function(){
             isMenuButtonClicked = !isMenuButtonClicked;
             var headerList = document.getElementById("header-list");
@@ -68,6 +68,7 @@ function onHeaderElementClick(name){
 }
 
 function hideList() {
+    isMenuButtonClicked = !isMenuButtonClicked;
     var headerList = document.getElementById("header-list");
     headerList.className = "hidden-header-list";
 }
