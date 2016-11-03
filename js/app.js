@@ -8,7 +8,7 @@ function onPageLoad(){
     
     if(viewportWidth >= 1024){
         isViewOnMobile = false;
-    } else if(viewportWidth <= 600){
+    } else if(viewportWidth <= 600 || (viewportWidth > 600 || viewportWidth < 1023)){
         isViewOnMobile = true;
 
         var container = document.getElementById("container");

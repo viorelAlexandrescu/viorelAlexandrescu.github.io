@@ -8,46 +8,62 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-.header {
-    background-color: #3F51B5;
-    display: block;
-    color: beige;
+.header{
+    width: 100%;
+    height: 10vw;
     position: fixed;
-    z-index: 10;
+    background-color: #3F51B5;
+    display: flex;
+    flex-direction: row;
     top: 0;
     margin-top: 0;
-    width: 100%;
-    padding-top: 8px;
-
+    z-index: 3;
     box-shadow: 0 0 19px black;
-    text-align: center;
-    font-size: 2.32vw;
-    transition: all 0.2s ease-in;
 }
-.header ul{
-    padding: 0 0 0 0;
-    margin: 16px 0 16px 0;
-}
-.header li{
-    display: inline;
-    margin: 8px;
-    color: #fafafa;
-    transition: font-size 0.3s ease;
-}
-.header li:hover{
-    font-size: larger;
-}
-.header a{
-    text-decoration: none;
-    color: #fafafa;
-}
-.header p{
+.shown-header-list{
+    visibility: visible;
+    display: block;
+    position: fixed;
+    top: 7.6vw;
+    left: 68.5vw;
     margin: 0;
+    padding: 2vw;
+    background-color: #fafafa;
+
+    box-shadow: 0 2vw 5vw black;
+    border-radius: 2px;
+}
+.shown-header-list a, li{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+
+    font-size: 2.4vw;
+    padding: 2vw 0;
+}
+
+.hidden-header-list{
+    visibility: hidden;
+    display: none;
 }
 
 #header-menu-button{
-    display: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 8vw;
+    max-height: 8vw;
+    padding: 0;
+    margin: auto 4vw;
+
 }
+#myName{
+    margin: auto 7.5vw auto auto;
+    display: block;
+    font-size: 4vw;
+    color: #fafafa;
+}
+
 
 #container{
     position: relative;
@@ -55,25 +71,33 @@ html, body {
     z-index: 2;
     margin: 0;
 }
-.content{
-    width: 100%;
-    height: 100%;
-}
 
-
-#about-page{
-    width: 60%;
-    margin: 0 auto;
+.profile-photo-area{
+    padding: 3vw 2vw 3vw 4vw;
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
-#about-page p{
-    margin: 0;
+#my-profile-photo{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin: auto 0;
+    max-width: 32vw;
 }
+
+#about-page{
+    width: 80%;
+    margin: 0 auto 5vw;
+    align-items: center;
+}
+
 .profile-card{
-    background-color: #3F51B5;
     width: 100%;
     height: 100%;
 
+    background-color: #3F51B5;
     display: flex;
     flex-direction: row;
 
@@ -81,49 +105,32 @@ html, body {
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .profile-info{
-    padding: 32px 16px;
+    margin: auto 0;
+    padding: 1.8vw;
     color: #fafafa;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     overflow: hidden;
-    font-size: 1vw;
-}
-.profile-info a{
-  text-decoration: none;
-  color: #fafafa;
+    font-size: 1.75vw;
 }
 .top-info-container{
-    width: 50%;
-    margin: 0 auto 0 0;
     display: inline-flex;
 }
 .info-leftPanel{
     float: left;
-    margin-right: 36px;
+    margin-right: 5vw;
 }
 .info-rightPanel{
     float: right;
 }
-.profile-photo-area{
-    display: flex;
-    align-items: center;
-    padding: 16px 7px 16px 16px;
-}
-#my-profile-photo{
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-}
-
 
 #resume-page {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 #resume-page p{
     margin: 0;
-
 }
 .resume-table{
     width: 100%;
@@ -132,22 +139,23 @@ html, body {
 .resume-title{
     text-align: left;
     font-weight: 500;
-    font-size: 1.9vw;
+    font-size: 4vw;
 }
 .resume-line{
     margin: 0;
 }
 .resume-row{
+    width: 90%;
+    margin: 0 auto 2vw;
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .resume-skill{
-    width: 50%;
+    width: 100%;
     text-align: start;
     padding-left: 8px;
-    margin:10px 16px 16px 0;
+    margin:0 16px 16px 0;
 }
-
 
 #asmi-projects-list{
     margin-top: 8px;
@@ -160,7 +168,7 @@ html, body {
 #projects-page{
     width: 70%;
     margin: 8px auto 16px;
-    font-size: 1.1vw;
+    font-size: 2.8vw;
 }
 #projects-page p{
     margin: 0;
@@ -170,8 +178,8 @@ html, body {
     color: #fafafa;
     width: 100%;
     height: 100%;
-    margin: 0 0 1.2vw;
-    padding: 1.2vw;
+    margin: 0 0 4vw;
+    padding: 2vw;
 
     border-radius: 3px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -179,14 +187,11 @@ html, body {
 }
 .project-card-title{
     padding-bottom: 26px;
-    font-size: 1.7vw;
+    font-size: 3.9vw;
     font-weight: 500;
 }
 .project-card a{
     text-decoration: none;
     color: orange;
     transition: box-shadow 0.2s ease;
-}
-.project-card a:hover{
-    box-shadow: 0 2px darkorange;
 }
