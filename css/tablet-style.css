@@ -156,7 +156,6 @@ html, body {
     padding-left: 8px;
     margin:0 16px 16px 0;
 }
-
 #asmi-projects-list{
     margin-top: 8px;
     margin-bottom: 8px;
@@ -165,10 +164,11 @@ html, body {
 #asmi-projects-list > li{
     margin-top: 16px;
 }
+
 #projects-page{
-    width: 70%;
-    margin: 8px auto 16px;
-    font-size: 2.8vw;
+    width: 65%;
+    margin: 0 auto;
+    font-size: 2.2vw;
 }
 #projects-page p{
     margin: 0;
@@ -187,7 +187,7 @@ html, body {
 }
 .project-card-title{
     padding-bottom: 26px;
-    font-size: 3.9vw;
+    font-size: 3.2vw;
     font-weight: 500;
 }
 .project-card a{
