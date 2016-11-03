@@ -8,14 +8,24 @@ function onPageLoad(){
     
     if(viewportWidth >= 1024){
         isViewOnMobile = false;
-        menuButton.style.display = "none"
     } else if(viewportWidth <= 600){
         isViewOnMobile = true;
-        menuButton.style.display = "block"
+        var isMenuButtonClicked = false;
+        menuButton.onclick = function(){
+            isMenuButtonClicked = !isMenuButtonClicked;
+            var headerList = document.getElementById("header-list");
+            if(isMenuButtonClicked){
+                headerList.className = "shown-header-list";
+            } else {
+                headerList.className = "hidden-header-list";
+            }
+
+
+        };
     }
 
     currentLoadedPage = "about";
-    pushContainerBelowNavigationBar(16);
+    pushContainerBelowHeader(16);
     onHeaderElementClick(currentLoadedPage);
 }
 
@@ -48,9 +58,13 @@ function onHeaderElementClick(name){
         }
     }
     pages[getIndexOfPage(name)].style.display = "block";
+    if(isViewOnMobile){
+        var headerList = document.getElementById("header-list");
+        headerList.className = "hidden-header-list";
+    }
 }
 
-function pushContainerBelowNavigationBar(pushDistanceValue){
+function pushContainerBelowHeader(pushDistanceValue){
     var container = document.getElementById("container"),
         pageHeader = document.getElementById("page-header");
 

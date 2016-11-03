@@ -45,6 +45,10 @@ html, body {
     margin: 0;
 }
 
+#header-menu-button{
+    display: none;
+}
+
 #container{
     position: relative;
     padding: 0;

@@ -8,48 +8,61 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-#header-list{
+.header{
+    width: 100%;
+    height: 13vw;
+    position: fixed;
+    background-color: #3F51B5;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 0;
+    z-index: 3;
+    box-shadow: 0 0 19px black;
+}
+.shown-header-list{
+    visibility: visible;
+    display: block;
+    position: fixed;
+    top: 10vw;
+    left: 57vw;
+    margin: 0;
+    padding: 2vw;
+    background-color: #fafafa;
+
+    box-shadow: 0 2vw 5vw black;
+    border-radius: 2px;
+}
+.shown-header-list a, li{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+
+    font-size: 4vw;
+    padding: 2vw 0;
+}
+
+.hidden-header-list{
     visibility: hidden;
     display: none;
 }
 
-#page-header{
-    background-color: #3F51B5;
-    width: 100%;
-    color: #fafafa;
-    display: inline-flex;
-    position: fixed;
-    top: 0;
-    margin-top: 0;
-    z-index: 10;
-}
-
-#myName{
-    margin: 0 0 0 auto;
-    padding: 4vw 0;
-    display: block;
-    font-size: 4vw;
-}
-
-
-#my-profile-photo{
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 17vw;
-    display: block;
-    margin: auto;
-    max-width: 32vw;
-    border-radius: 50%;
-}
-
 #header-menu-button{
+    display: block;
     width: 100%;
     height: auto;
     max-width: 9vw;
     padding: 0;
     margin: 0 3vw 0 auto;
 }
+#myName{
+    margin: 0 0 0 auto;
+    padding: 4vw 0;
+    display: block;
+    font-size: 4vw;
+    color: #fafafa;
+}
+
 
 #container{
     position: relative;
@@ -64,16 +77,24 @@ html, body {
     align-items: center;
     background-color: #3F51B5;
 }
+#my-profile-photo{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 17vw;
+    display: block;
+    margin: auto;
+    max-width: 32vw;
+    border-radius: 50%;
+}
 
 #about-page{
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 5vw;
     align-items: center;
 }
 
 .profile-card{
-
-
     width: 100%;
     height: 100%;
 
@@ -89,18 +110,90 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    font-size: 2.7vw;
+    font-size: 3.2vw;
 }
 .top-info-container{
-    width: 50%;
-    margin: 0 auto 0 0;
+    width: 75%;
+    margin: 12vw auto 0;
     display: inline-flex;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
 }
 .info-leftPanel{
     float: left;
-    margin-right: 36px;
+    margin-right: 5vw;
 }
 .info-rightPanel{
     float: right;
+}
+
+#resume-page {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 3.3vw;
+}
+#resume-page p{
+    margin: 0;
+}
+.resume-table{
+    width: 100%;
+    margin-bottom: 2vw;
+}
+.resume-title{
+    text-align: left;
+    font-weight: 500;
+    font-size: 5vw;
+}
+.resume-line{
+    margin: 0;
+}
+.resume-row{
+    width: 90%;
+    margin: 0 auto 2vw;
+    display: inline-flex;
+    flex-direction: column;
+}
+.resume-skill{
+    width: 100%;
+    text-align: start;
+    padding-left: 8px;
+    margin:0 16px 16px 0;
+}
+
+#asmi-projects-list{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 16px;
+}
+#asmi-projects-list > li{
+    margin-top: 16px;
+}
+#projects-page{
+    width: 70%;
+    margin: 8px auto 16px;
+    font-size: 3.6vw;
+}
+#projects-page p{
+    margin: 0;
+}
+.project-card{
+    background-color: #3F51B5;
+    color: #fafafa;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 4vw;
+    padding: 2vw;
+
+    border-radius: 3px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.project-card-title{
+    padding-bottom: 26px;
+    font-size: 5vw;
+    font-weight: 500;
+}
+.project-card a{
+    text-decoration: none;
+    color: orange;
+    transition: box-shadow 0.2s ease;
 }
