@@ -10,6 +10,12 @@ function onPageLoad(){
         isViewOnMobile = false;
     } else if(viewportWidth <= 600){
         isViewOnMobile = true;
+
+        var container = document.getElementById("container");
+        container.onclick = function () {
+            hideList();
+        };
+
         var isMenuButtonClicked = false;
         menuButton.onclick = function(){
             isMenuButtonClicked = !isMenuButtonClicked;
@@ -19,8 +25,6 @@ function onPageLoad(){
             } else {
                 headerList.className = "hidden-header-list";
             }
-
-
         };
     }
 
@@ -59,9 +63,13 @@ function onHeaderElementClick(name){
     }
     pages[getIndexOfPage(name)].style.display = "block";
     if(isViewOnMobile){
-        var headerList = document.getElementById("header-list");
-        headerList.className = "hidden-header-list";
+        hideList()
     }
+}
+
+function hideList() {
+    var headerList = document.getElementById("header-list");
+    headerList.className = "hidden-header-list";
 }
 
 function pushContainerBelowHeader(pushDistanceValue){
