@@ -68,7 +68,7 @@ function onPageLoad() {
     }
 
     currentLoadedPage = "about";
-    pushContainerBelowHeader(16);
+    pushContainerBelowHeader(24);
     onHeaderElementClick(currentLoadedPage);
 }
 
