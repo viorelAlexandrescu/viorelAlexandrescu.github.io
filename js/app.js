@@ -31,7 +31,7 @@ function onHeaderElementClick(name) {
     var pages = document.getElementsByClassName("content"),
         i;
     for (i = 0; i < pages.length; i++) {
-        if (pages[i].getAttribute("about") != name && pages[i].style.display = "block") {
+        if (pages[i].getAttribute("about") != name && pages[i].style.display == "block") {
             pages[i].style.display = "none";
         }
     }
