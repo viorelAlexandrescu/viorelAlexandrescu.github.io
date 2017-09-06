@@ -8,185 +8,34 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-.header {
-    background-color: #3F51B5;
-    display: block;
-    color: beige;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    margin-top: 0;
-    width: 100%;
-    padding-top: 8px;
-
-    box-shadow: 0 0 19px black;
-    text-align: center;
-    font-size: 2.32vw;
-    transition: all 0.2s ease-in;
-}
-.header ul{
-    padding: 0 0 0 0;
-    margin: 16px 0 16px 0;
-}
-.header li{
-    display: inline;
-    margin: 8px;
-    color: #fafafa;
-    transition: font-size 0.3s ease;
-}
-.header li:hover{
-    font-size: larger;
-}
-.header a{
-    text-decoration: none;
-    color: #fafafa;
-}
-.header p{
-    margin: 0;
-}
-
-#header-menu-button{
-    display: none;
-}
-
-#container{
-    position: relative;
+.profile-card.mdl-card {
     padding: 0;
-    z-index: 2;
-    margin: 0;
+    border: dashed;
+    width: 100%;
 }
-.content{
+
+.profile-card > .mdl-card__title {
+    color: #fff;
+    background: url('../assets/profile-wide.jpg') center / cover;
+}
+
+.mdl-layout__header-row > .mdl-layout-title {
+    font-size: 3vw;
+    margin: 7.5vw auto;
+}
+
+.mdl-layout__header-row > .mdl-navigation {
+    border: dashed;
+}
+
+.page-content {
+    top: 2vw;
+    padding: 0;
+    margin: 0 10%;
+    position: relative;
+}
+
+.about-page {
     width: 100%;
     height: 100%;
-}
-
-
-#about-page{
-    width: 60%;
-    margin: 0 auto;
-    align-items: center;
-}
-#about-page p{
-    margin: 0;
-}
-.profile-card{
-    background-color: #3F51B5;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-
-    border-radius: 3px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.profile-info{
-    padding: 32px 16px;
-    color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-size: 1vw;
-}
-.profile-info a{
-  text-decoration: none;
-  color: #fafafa;
-}
-.top-info-container{
-    width: 50%;
-    margin: 0 auto 0 0;
-    display: inline-flex;
-}
-.info-leftPanel{
-    float: left;
-    margin-right: 36px;
-}
-.info-rightPanel{
-    float: right;
-}
-.profile-photo-area{
-    display: flex;
-    align-items: center;
-    padding: 16px 7px 16px 16px;
-}
-#my-profile-photo{
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-}
-
-
-#resume-page {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1vw;
-}
-#resume-page p{
-    margin: 0;
-
-}
-.resume-table{
-    width: 100%;
-    margin-bottom: 2vw;
-}
-.resume-title{
-    text-align: left;
-    font-weight: 500;
-    font-size: 1.9vw;
-}
-.resume-line{
-    margin: 0;
-}
-.resume-row{
-    display: inline-flex;
-    flex-direction: row;
-}
-.resume-skill{
-    width: 50%;
-    text-align: start;
-    padding-left: 8px;
-    margin:10px 16px 16px 0;
-}
-
-
-#asmi-projects-list{
-    margin-top: 8px;
-    margin-bottom: 8px;
-    padding-left: 16px;
-}
-#asmi-projects-list > li{
-    margin-top: 16px;
-}
-#projects-page{
-    width: 70%;
-    margin: 8px auto 16px;
-    font-size: 1.1vw;
-}
-#projects-page p{
-    margin: 0;
-}
-.project-card{
-    background-color: #3F51B5;
-    color: #fafafa;
-    width: 100%;
-    height: 100%;
-    margin: 0 0 1.2vw;
-    padding: 1.2vw;
-
-    border-radius: 3px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-.project-card-title{
-    padding-bottom: 26px;
-    font-size: 1.7vw;
-    font-weight: 500;
-}
-.project-card a{
-    text-decoration: none;
-    color: orange;
-    transition: box-shadow 0.2s ease;
-}
-.project-card a:hover{
-    box-shadow: 0 2px darkorange;
 }
