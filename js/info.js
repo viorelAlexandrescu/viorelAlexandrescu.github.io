@@ -7,7 +7,7 @@ var aboutData = {
 
 var skills = [{
         title: "Web Design",
-        description: "This website was made as minimalist as possible, using only basic <b>HTML</b> tags and \"prettifying\" it with <b>CSS</b>.<br><br>The flow of the page is implemented with plain <b>JavaScript</b>.<br><br>I tried to give it a Material Design look as I am a fan of this design guideline myself.<br>The next version of this page shall be created with Angular, so several information contained is subject to change"
+        description: "This website was made as minimalist as possible, using only basic <b>HTML</b> tags and \"prettifying\" it with <b>CSS</b>.<br><br>The flow of the page is implemented with plain <b>JavaScript</b>.<br><br>I tried to give it a Material Design look as I am a fan of this design guideline myself.<br><br>Disclaimer: The next version of this page shall be created with Angular, thus information shown is <b>subject to change.</b>"
     },
 
     {
@@ -28,7 +28,7 @@ var skills = [{
 
 var experience = [{
         title: "Part-Time Web Developer at  Asseco SEE Romania",
-        description: "February 2018 - Present<br><br>Develop enterprise solutions and maintain applications using Spring Framework and several frontend technologies"
+        description: "February 2018 - Present<br><br>Develop enterprise solutions and maintain applications using Spring Framework and several frontend technologies."
     },
 
     {
