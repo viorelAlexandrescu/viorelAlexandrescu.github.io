@@ -17,91 +17,94 @@
 
 <body onscroll="onPageScroll()">
 
-<!--Page Header-->
-<div id="page-header" class="header">
-    <p id="myName">Viorel Ștefan Alexandrescu</p>
-    <ul id="header-list" class="hidden-header-list">
-        <li><a name="My Resume" href="#" onclick="onHeaderElementClick('resume')">Resume</a></li>
-        <li><a name="My Projects" href="#" onclick="onHeaderElementClick('projects')">Projects</a></li>
-        <li><a href="https://www.instagram.com/viorel.alexandrescu/" target="_blank">Photo Gallery</a></li>
-        <li><a name="About Me" href="#" onclick="onHeaderElementClick('about')">About</a></li>
-    </ul>
-    <img id="header-menu-button" src="images/ic_menu_white_48dp_1x.png">
-</div>
+    <!--Page Header-->
+    <div id="page-header" class="header">
+        <p id="myName">Viorel Ștefan Alexandrescu</p>
+        <ul id="header-list" class="hidden-header-list">
+            <li>
+                <a name="My Resume" href="#" onclick="onHeaderElementClick('resume')">Resume</a>
+            </li>
+            <li>
+                <a name="My Projects" href="#" onclick="onHeaderElementClick('projects')">Projects</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/viorel.alexandrescu/" target="_blank">Photo Gallery</a>
+            </li>
+            <li>
+                <a name="About Me" href="#" onclick="onHeaderElementClick('about')">About</a>
+            </li>
+        </ul>
+        <img id="header-menu-button" src="images/ic_menu_white_48dp_1x.png">
+    </div>
 
-<div id="container">
+    <div id="container">
 
-    <div id="about-page" class="content" about="about">
-        <div class="profile-card">
+        <div id="about-page" class="content" about="about">
+            <div class="profile-card">
 
-            <div class="profile-photo-area">
-                <img id="my-profile-photo" src="images/profile-photo.jpg">
+                <div class="profile-photo-area">
+                    <img id="my-profile-photo" src="images/profile-photo.jpg">
+                </div>
+
+                <div id="profile-info-area" class="profile-info">
+                    <div id="topInfoContainer" class="top-info-container"></div>
+                    <div id="description-area"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="resume-page" class="content" about="resume">
+
+            <!--Skills Table-->
+            <p class="resume-title">Skills</p>
+            <hr class="resume-line">
+            <div id="resume-table" class="resume-table"></div>
+
+            <!--Experience Table-->
+            <p class="resume-title">Work Experience</p>
+            <hr>
+            <div id="experience-table" class="resume-table"></div>
+
+        </div>
+
+        <div id="projects-page" class="content" about="projects">
+
+            <!-- BoomBox -->
+            <div class="project-card">
+                <p class="project-card-title">BoomBox</p>
+                <p>I wanted to make a music player suitable for my needs. Minimalist, yet effective!</p>
+                <hr>
+                <a href="https://github.com/viorelAlexandrescu/BoomBox" target="_blank">GitHub Page</a>
             </div>
 
-            <div id="profile-info-area" class="profile-info">
-                <div id="topInfoContainer" class="top-info-container"></div>
-                <div id="description-area"></div>
+            <!-- LRobot -->
+            <div class="project-card">
+                <p class="project-card-title">LRobot</p>
+                <p>LRobot is a next-gen robot which can move around a room, identify people and memorise who they are!
+                    <br>My job on this project was to implement how it shows it's emotions; I used the Java Swing API to draw
+                    it's face and Java to change his facial expressions when the backend would ask so.</p>
+                <hr>
+                <a href="https://bitbucket.org/citrusmockoffteam/lrobot-citrus-mock-off/branch/javaUI" target="_blank">Bitbucket Page</a>
             </div>
 
+            <!-- Electronics Shop-->
+            <div class="project-card">
+                <p class="project-card-title">IT Shop</p>
+                <p>This is a school project for the Java Course.
+                    <br> It's a desktop application for administrating an IT Shop.
+                    <br>
+                    <br> Before starting development, I found this as being a perfect opportunity to learn how to implement the
+                    features required using MVC.
+                    <br> I used JavaFX to implement my views, the controller was made up of Java methods and API calls from JDBC
+                    for all my queries.
+                    <br> The Model was made up of classes which built up all the entities within the database.</p>
+                <hr>
+                <a href="https://bitbucket.org/viorelAlexandrescu/java-course-electronics-shop/overview" target="_blank">Bitbucket Page</a>
+            </div>
         </div>
+
     </div>
-
-    <div id="resume-page" class="content" about="resume">
-
-        <!--Skills Table-->
-        <p class="resume-title">Skills</p>
-        <hr class="resume-line">
-        <div id="resume-table" class="resume-table"></div>
-
-        <!--Experience Table-->
-        <p class="resume-title">Work Experience</p>
-        <hr>
-        <div id="experience-table" class="resume-table"></div>
-
-    </div>
-
-    <div id="projects-page" class="content" about="projects">
-
-        <!-- BoomBox -->
-        <div class="project-card">
-            <p class="project-card-title">BoomBox</p>
-            <p>I wanted to make a music player suitable for my needs. Minimalist, yet effective!</p>
-            <hr>
-            <a href="https://github.com/viorelAlexandrescu/BoomBox" target="_blank">GitHub Page</a>
-        </div>
-
-        <!-- LRobot -->
-        <div class="project-card">
-            <p class="project-card-title">LRobot</p>
-            <p>LRobot is a next-gen robot which can move around a room, identify people
-                and memorise who they are!
-                <br>My job on this project was to implement how it shows it's emotions;
-                I used the Java Swing API to draw it's face and Java to change his facial
-                expressions when the backend would ask so.</p>
-            <hr>
-            <a href="https://bitbucket.org/citrusmockoffteam/lrobot-citrus-mock-off/branch/javaUI"
-               target="_blank">Bitbucket Page</a>
-        </div>
-
-        <!-- Electronics Shop-->
-        <div class="project-card">
-            <p class="project-card-title">IT Shop</p>
-            <p>This is a school project for the Java Course.<br>
-                It's a desktop application for administrating an IT Shop.<br><br>
-
-                Before starting development, I found this as being a perfect opportunity
-                to learn how to implement the features required using MVC.
-                <br>
-                I used JavaFX to implement my views,
-                the controller was made up of Java methods and API calls from JDBC for all my queries.<br>
-                The Model was made up of classes which built up all the entities within the database.</p>
-            <hr>
-            <a href="https://bitbucket.org/N1njagangsta/java-course-electronics-shop/overview"
-               target="_blank">Bitbucket Page</a>
-        </div>
-    </div>
-
-</div>
 
 
 </body>
