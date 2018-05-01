@@ -41,84 +41,83 @@ function onHeaderElementClick(name) {
         hideList();
     }
 }
-function loadDataInAboutPage(){
+
+function loadDataInAboutPage() {
     var leftInfoPanel = document.createElement("div");
-    for(var i = 0; i < aboutData.contactInfoVars.length; ++i){
+    for (var i = 0; i < aboutData.contactInfoVars.length; ++i) {
         var leftInfoValue = document.createElement("p");
         leftInfoValue.innerHTML = aboutData.contactInfoVars[i];
         leftInfoPanel.appendChild(leftInfoValue);
     }
     leftInfoPanel.className = "info-leftPanel";
-    
-    
+
+
     var rightInfoPanel = document.createElement("div");
-    for(var i = 0; i < aboutData.contactInfoData.length; i++){
+    for (var i = 0; i < aboutData.contactInfoData.length; i++) {
         var rightInfoValue = document.createElement("p");
         rightInfoValue.innerHTML = aboutData.contactInfoData[i];
         rightInfoPanel.appendChild(rightInfoValue);
     }
     rightInfoPanel.className = "info-rightPanel";
-    
+
     var infoPanel = document.getElementById("topInfoContainer");
     infoPanel.appendChild(leftInfoPanel);
     infoPanel.appendChild(rightInfoPanel);
-    
+
     var description = document.createElement("p")
     description.innerHTML = aboutData.description;
-    
+
     var descArea = document.getElementById("description-area");
     descArea.appendChild(description);
-    
+
     var infoArea = document.getElementById("profile-info-area");
     infoArea.appendChild(descArea);
 }
 
-function loadDataInResumePage(data, placeholder){
+function loadDataInResumePage(data, placeholder) {
     //arbitrary number of skill per row
     var maxSkillsPerRow = 2;
-    var numberOfRows = data.length % maxSkillsPerRow ? 
-        (data.length / maxSkillsPerRow) + 1 : data.length / maxSkillsPerRow ;
+    var numberOfRows = data.length % maxSkillsPerRow ?
+        (data.length / maxSkillsPerRow) + 1 : data.length / maxSkillsPerRow;
     // iterator for each skill
     var skillIterator = 0;
-    
-     for(var rowIterator = 0;
-            rowIterator < numberOfRows;
-            rowIterator++){
-        
+
+    for (var rowIterator = 0; rowIterator < numberOfRows; rowIterator++) {
+
         var newRow = document.createElement("div");
         newRow.className = "resume-row";
-         
-         for(var numberOfSkills = 1;
-                numberOfSkills <= maxSkillsPerRow;
-                numberOfSkills++){
-             
-             var newSkill = document.createElement("div");
-             newSkill.className = "resume-skill";
-             
-             var newSkillTitle = document.createElement("h3");
-             
-             newSkillTitle.innerHTML = data[skillIterator].title;
-             
-             newSkill.appendChild(newSkillTitle);
-             
-             var newSkillDescription = document.createElement("p");
-             
-             newSkillDescription.innerHTML = data[skillIterator].description;
-             
-             newSkill.appendChild(newSkillDescription);
-             
-             newRow.appendChild(newSkill);
-             placeholder.appendChild(newRow);
-             
-             skillIterator++;
-         }
+
+        for (var numberOfSkills = 1; numberOfSkills <= maxSkillsPerRow; numberOfSkills++) {
+            if (data[skillIterator] != undefined) {
+
+                var newSkill = document.createElement("div");
+                newSkill.className = "resume-skill";
+
+                var newSkillTitle = document.createElement("h3");
+
+                newSkillTitle.innerHTML = data[skillIterator].title;
+
+                newSkill.appendChild(newSkillTitle);
+
+                var newSkillDescription = document.createElement("p");
+
+                newSkillDescription.innerHTML = data[skillIterator].description;
+
+                newSkill.appendChild(newSkillDescription);
+
+                newRow.appendChild(newSkill);
+                placeholder.appendChild(newRow);
+
+                skillIterator++;
+            }
+        }
     }
 }
 
 function onPageLoad() {
     var viewportWidth = window.innerWidth,
         menuButton = document.getElementById("header-menu-button");
-    
+
     if (viewportWidth >= 1024) {
         isViewOnMobile = false;
     } else if (viewportWidth <= 600 || (viewportWidth > 600 || viewportWidth < 1023)) {
@@ -138,12 +137,12 @@ function onPageLoad() {
             } else {
                 headerList.className = "hidden-header-list";
             }
-        };   
+        };
     }
     loadDataInAboutPage();
     loadDataInResumePage(skills, document.getElementById("resume-table"));
     loadDataInResumePage(experience, document.getElementById("experience-table"));
-    
+
     currentLoadedPage = "about";
     pushContainerBelowHeader(24);
     onHeaderElementClick(currentLoadedPage);
